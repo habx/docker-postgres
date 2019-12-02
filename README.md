@@ -4,3 +4,9 @@ Postgres with wal2json and slots replications
 
 * postgres 12
 * [wal2json](https://github.com/eulerto/wal2json)
+
+## run
+
+```bash
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d habx/postgres
+```
