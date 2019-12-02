@@ -19,4 +19,4 @@ RUN git clone https://github.com/eulerto/wal2json -b master --single-branch && \
 FROM postgres:12
 
 COPY --from=build /usr/lib/postgresql/$PG_MAJOR/lib/wal2json.so /usr/lib/postgresql/$PG_MAJOR/lib/
-COPY postgresql.conf.sample /usr/share/postgresql/postgresql.conf
+COPY postgresql.conf.sample /usr/share/postgresql/postgresql.conf.sample
