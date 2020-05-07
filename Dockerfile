@@ -1,6 +1,6 @@
 FROM postgres:12 AS build
 
-ENV WAL2JSON_COMMIT_SHA=da90c76a69966a7dfcf0657acacde916164bd9c0
+ENV WAL2JSON_COMMIT_SHA=9f9762315062888f7f7f4f0a115073a33ad1275e
 
 # Install the packages which will be required to get everything to compile
 RUN apt-get update && \
