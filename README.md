@@ -2,7 +2,7 @@
 
 Postgres with wal2json and slots replications
 
-* postgres 12
+* postgres 12 (for now)
 * [wal2json](https://github.com/eulerto/wal2json)
 
 ## run
