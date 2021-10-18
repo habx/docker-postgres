@@ -1,4 +1,4 @@
-FROM postgres:12 AS build
+FROM postgres:14 AS build
 
 ENV WAL2JSON_COMMIT_SHA=9f9762315062888f7f7f4f0a115073a33ad1275e
 
@@ -16,7 +16,7 @@ RUN git clone https://github.com/eulerto/wal2json -b master --single-branch && \
     git checkout $WAL2JSON_COMMIT_SHA && \
     make && make install
 
-FROM postgres:12
+FROM postgres:14
 
 COPY --from=build /usr/lib/postgresql/$PG_MAJOR/lib/wal2json.so /usr/lib/postgresql/$PG_MAJOR/lib/
 COPY postgresql.conf.sample /usr/share/postgresql/postgresql.conf.sample
